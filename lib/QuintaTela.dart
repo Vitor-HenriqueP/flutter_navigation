@@ -7,21 +7,31 @@ class QuartaTela extends StatefulWidget{
 }
 
 class _QuartaTelaState extends State<QuartaTela>{
+  bool _switchValue = false;
   @override
   Widget build(BuildContext context) { 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tela Secundária'),
+        title: Text('Quinta Tela'),
         backgroundColor: const Color.fromARGB(255, 79, 176, 255),
       ),
       body: Container(
         padding: EdgeInsets.all(32),
         child: Column(
-          children: <Widget>[
+           children: <Widget>[
             Text(
-              'Conteúdo da quinta tela', 
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)
-              ),
+              "Quinta Tela",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            SwitchListTile(
+              title: Text("Ativar/Desativar"),
+              value: _switchValue,
+              onChanged: (bool value) {
+                setState(() {
+                  _switchValue = value;
+                });
+              },
+            ),
           ],
         ),
       ),

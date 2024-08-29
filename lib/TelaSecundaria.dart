@@ -7,6 +7,7 @@ class TelaSecundaria extends StatefulWidget{
 }
 
 class _TelaSecundariaState extends State<TelaSecundaria>{
+  String _selectedItem = 'Opção 1';
   @override
   Widget build(BuildContext context) { 
     return Scaffold(
@@ -17,11 +18,27 @@ class _TelaSecundariaState extends State<TelaSecundaria>{
       body: Container(
         padding: EdgeInsets.all(32),
         child: Column(
-          children: <Widget>[
+           children: <Widget>[
             Text(
-              'Conteúdo da tela secundária', 
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)
-              ),
+              "Segunda Tela",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 20), // Espaço entre o texto e o DropdownButton
+            DropdownButton<String>(
+              value: _selectedItem,
+              onChanged: (String? newValue) {
+                setState(() {
+                  _selectedItem = newValue!;
+                });
+              },
+              items: <String>['Opção 1', 'Opção 2', 'Opção 3', 'Opção 4']
+                  .map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+            ),
           ],
         ),
       ),
