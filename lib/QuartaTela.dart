@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 
-class QuintaTela extends StatefulWidget{
+class QuartaTela extends StatefulWidget{
   @override
-  _QuintaTelaState createState() => _QuintaTelaState();
+  _QuartaTelaState createState() => _QuartaTelaState();
 }
 
-class _QuintaTelaState extends State<QuintaTela>{
+class _QuartaTelaState extends State<QuartaTela>{
    double _sliderValue = 0.0;
   @override
   Widget build(BuildContext context) { 

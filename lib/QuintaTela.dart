@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 
-class QuartaTela extends StatefulWidget{
+class QuintaTela extends StatefulWidget{
   @override
-  _QuartaTelaState createState() => _QuartaTelaState();
+  _QuintaTelaState createState() => _QuintaTelaState();
 }
 
-class _QuartaTelaState extends State<QuartaTela>{
+class _QuintaTelaState extends State<QuintaTela>{
   bool _switchValue = false;
   @override
   Widget build(BuildContext context) { 
